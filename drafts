@@ -1,0 +1,6 @@
+docker build .
+docker run -it -p 8080:8080 bde7cc855f88
+
+gcloud config get-value project
+gcloud builds submit --tag gcr.io/cloud-run-try-242122/helloworld
+gcloud beta run deploy --image gcr.io/cloud-run-try-242122/helloworld
